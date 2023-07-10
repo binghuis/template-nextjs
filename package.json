@@ -6,8 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "openapi": "npx orval"
+    "lint": "next lint"
   },
   "dependencies": {
     "next": "13.4.9",
@@ -19,11 +18,9 @@
     "@types/react": "18.2.14",
     "@types/react-dom": "18.2.6",
     "autoprefixer": "10.4.14",
-    "axios": "^1.4.0",
     "client-only": "^0.0.1",
     "eslint": "8.44.0",
     "eslint-config-next": "^13.4.9",
-    "orval": "^6.16.0",
     "postcss": "8.4.25",
     "prettier": "^3.0.0",
     "prettier-plugin-organize-imports": "^3.2.2",
