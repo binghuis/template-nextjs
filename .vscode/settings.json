@@ -31,12 +31,16 @@
     },
     "stylelint.validate": [
         "css",
-        "less"
+        "sass",
+        "scss"
     ],
     "[css]": {
         "editor.defaultFormatter": "stylelint.vscode-stylelint"
     },
-    "[less]": {
+    "[sass]": {
+        "editor.defaultFormatter": "stylelint.vscode-stylelint"
+    },
+    "[scss]": {
         "editor.defaultFormatter": "stylelint.vscode-stylelint"
     },
     // updated 2023-07-08 21:00
