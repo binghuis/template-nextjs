@@ -1,9 +1,9 @@
 /** @type {import('next').NextConfig} */
 
-import path from 'mode:path';
+import path from 'path';
 
 const nextConfig = {
-  reactStrictMode: true,
+  reactStrictMode: false,
   swcMinify: true,
   sassOptions: {
     includePaths: [path.join(__dirname, 'src/styles')],
