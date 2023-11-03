@@ -1,9 +1,10 @@
-import { Metadata } from 'next';
-
-export const metadata: Metadata = {
-  title: 'Nextjs 13',
-};
+'use client';
+import { NextUIProvider } from '@nextui-org/react';
 
 export default function App() {
-  return <main className="flex min-h-screen flex-col items-center justify-between">88</main>;
+  return (
+    <NextUIProvider>
+      <main className="flex min-h-screen flex-col items-center justify-between">88</main>;
+    </NextUIProvider>
+  );
 }
