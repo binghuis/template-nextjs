@@ -1,10 +1,9 @@
-'use client';
-import { NextUIProvider } from '@nextui-org/react';
+import { ThemeSwitcher } from '@src/components/theme-switcher';
 
 export default function App() {
   return (
-    <NextUIProvider>
-      <main className="flex min-h-screen flex-col items-center justify-between">88</main>;
-    </NextUIProvider>
+    <main className="flex min-h-screen flex-col items-center justify-between">
+      <ThemeSwitcher />
+    </main>
   );
 }
