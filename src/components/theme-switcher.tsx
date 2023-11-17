@@ -5,6 +5,7 @@ import { MoonIcon } from '@src/icons/moon';
 import { SunIcon } from '@src/icons/sun';
 import { useTheme } from 'next-themes';
 import { useEffect, useState } from 'react';
+
 export function ThemeSwitcher() {
   const [isSelected, setIsSelected] = useState(false);
   const { theme, setTheme } = useTheme();
