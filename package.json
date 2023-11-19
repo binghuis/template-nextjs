@@ -24,12 +24,12 @@
     "node": "18"
   },
   "devDependencies": {
-    "@types/node": "20.9.1",
+    "@types/node": "20.9.2",
     "@types/react": "18.2.37",
     "@types/react-dom": "18.2.15",
     "autoprefixer": "10.4.16",
     "client-only": "^0.0.1",
-    "eslint": "8.53.0",
+    "eslint": "8.54.0",
     "eslint-config-next": "^14.0.3",
     "next-sitemap": "^4.2.3",
     "postcss": "8.4.31",
