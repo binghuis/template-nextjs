@@ -16,3 +16,11 @@ body {
   height: 100vh;
   overflow-x: hidden;
 }
+
+::-webkit-scrollbar {
+  width: 6px; /* 滚动条宽 */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #eeeeee; /* 滚动条拖动块颜色 */
+}
