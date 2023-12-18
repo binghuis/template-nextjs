@@ -2,9 +2,9 @@
 
 import { useEffect } from 'react';
 
+// 同级页面异常捕获
 export default function Error({ error, reset }: { error: Error; reset: () => void }) {
   useEffect(() => {
-    // Log the error to an error reporting service
     console.error(error);
   }, [error]);
 

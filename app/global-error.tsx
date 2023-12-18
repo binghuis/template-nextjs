@@ -1,5 +1,6 @@
 'use client';
 
+// 根布局/根模板异常捕获
 export default function GlobalError({ error, reset }: { error: Error; reset: () => void }) {
   return (
     <html>
