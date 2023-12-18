@@ -8,10 +8,17 @@ export const metadata: Metadata = {
   keywords: [],
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+  login,
+}: {
+  children: React.ReactNode;
+  login: React.ReactNode;
+}) {
   return (
     <html lang="en" suppressHydrationWarning>
       <body>
+        {login}
         <Providers>{children}</Providers>
       </body>
     </html>
