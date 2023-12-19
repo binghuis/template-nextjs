@@ -2,6 +2,7 @@ import '@src/styles/globals.css';
 import { Metadata } from 'next';
 import { Providers } from './providers';
 import StyledJsxRegistry from './registry';
+// import type { Route } from 'next';
 
 export const metadata: Metadata = {
   title: 'Tmpl Nextjs',

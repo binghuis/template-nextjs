@@ -11,6 +11,9 @@ const nextConfig = {
   compiler: {
     removeConsole: true,
   },
+  experimental: {
+    typedRoutes: true,
+  },
 };
 
 module.exports = nextConfig;
