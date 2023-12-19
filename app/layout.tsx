@@ -1,6 +1,7 @@
 import '@src/styles/globals.css';
 import { Metadata } from 'next';
 import { Providers } from './providers';
+import StyledJsxRegistry from './registry';
 
 export const metadata: Metadata = {
   title: 'Tmpl Nextjs',
@@ -18,8 +19,9 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body>
-        {login}
-        <Providers>{children}</Providers>
+        <Providers>
+          <StyledJsxRegistry>{children}</StyledJsxRegistry>
+        </Providers>
       </body>
     </html>
   );
