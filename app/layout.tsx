@@ -1,3 +1,4 @@
+import photos from '@src/constant/photos';
 import '@src/styles/globals.css';
 import { Metadata } from 'next';
 import Link from 'next/link';
@@ -11,12 +12,10 @@ export const metadata: Metadata = {
   keywords: ['nextjs'],
 };
 
-export default function RootLayout({
-  children,
-  auth,
-}: {
+export default function RootLayout(props: {
   children: React.ReactNode;
   auth: React.ReactNode;
+  modal: React.ReactNode;
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
@@ -29,13 +28,20 @@ export default function RootLayout({
             <div>
               <Link href="/settings">To @Children/Settings</Link>
             </div>
+
             <div>
               <Link href="/">Back To Home</Link>
             </div>
             <div className="text-green-600">
-              {auth}
-              {children}
+              {props.auth}
+              {props.children}
+              {props.modal}
             </div>
+            {photos.map(({ id, imageSrc }) => (
+              <Link className="block" key={id} href={`/photos/${id}`}>
+                {imageSrc}
+              </Link>
+            ))}
           </StyledJsxRegistry>
         </Providers>
       </body>
