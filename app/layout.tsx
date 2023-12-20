@@ -7,7 +7,7 @@ import StyledJsxRegistry from './registry';
 export const metadata: Metadata = {
   title: 'Tmpl Nextjs',
   description: 'Nextjs 项目模板',
-  keywords: [],
+  keywords: ['nextjs'],
 };
 
 export default function RootLayout({
@@ -20,6 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body>
+        {login}
         <Providers>
           <StyledJsxRegistry>{children}</StyledJsxRegistry>
         </Providers>
