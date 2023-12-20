@@ -1,5 +1,6 @@
 import '@src/styles/globals.css';
 import { Metadata } from 'next';
+import Link from 'next/link';
 import { Providers } from './providers';
 import StyledJsxRegistry from './registry';
 // import type { Route } from 'next';
@@ -12,17 +13,30 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-  login,
+  auth,
 }: {
   children: React.ReactNode;
-  login: React.ReactNode;
+  auth: React.ReactNode;
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
       <body>
-        {login}
         <Providers>
-          <StyledJsxRegistry>{children}</StyledJsxRegistry>
+          <StyledJsxRegistry>
+            <div>
+              <Link href="/login">To @Auth/Login</Link>
+            </div>
+            <div>
+              <Link href="/settings">To @Children/Settings</Link>
+            </div>
+            <div>
+              <Link href="/">Back To Home</Link>
+            </div>
+            <div className="text-green-600">
+              {auth}
+              {children}
+            </div>
+          </StyledJsxRegistry>
         </Providers>
       </body>
     </html>
