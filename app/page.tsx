@@ -7,7 +7,7 @@ export default function App() {
     axios.get('/api/dog?a=2');
   }, []);
   return (
-    <main>
+    <main className="">
       {/* <ThemeSwitcher />
       <ChatBox /> */}
       @children
