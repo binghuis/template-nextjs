@@ -1,11 +1,12 @@
 {
-  "name": "my-app",
+  "name": "tmpl-nextjs",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "debug": "next build --debug",
+    "build:profile": "next build --profile",
+    "build:debug": "next build --debug",
     "postbuild": "next-sitemap",
     "start": "next start",
     "lint": "next lint",

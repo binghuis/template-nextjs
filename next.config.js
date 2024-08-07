@@ -17,13 +17,28 @@ const nextConfig = {
   images: {
     remotePatterns: [
       {
-        protocol: 'http',
-        hostname: '**.placekitten.com',
-        port: '',
-        pathname: '',
+        protocol: 'https',
+        hostname: '**',
       },
     ],
   },
+  async redirects() {
+    return [
+      {
+        source: '/index',
+        destination: '/',
+        permanent: true,
+      },
+    ];
+  },
+  // async rewrites() {
+  //   return [
+  //     {
+  //       source: '/about',
+  //       destination: '/',
+  //     },
+  //   ];
+  // },
 };
 
 module.exports = nextConfig;
