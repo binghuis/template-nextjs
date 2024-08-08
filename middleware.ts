@@ -1,12 +1,9 @@
-import type { NextRequest } from 'next/server';
-import { NextResponse } from 'next/server';
+import { middlewareChain } from '@src/lib/utils';
+import { withAuth } from '@src/middlewares/with-auth';
+import { withCORS } from '@src/middlewares/with-cors';
 
-// This function can be marked `async` if using `await` inside
-export function middleware(request: NextRequest) {
-  return NextResponse.redirect(new URL('/', request.url));
-}
+export default middlewareChain([withCORS, withAuth]);
 
-// See "Matching Paths" below to learn more
 export const config = {
-  matcher: '/test/:path*',
+  matcher: '/api/:path*',
 };

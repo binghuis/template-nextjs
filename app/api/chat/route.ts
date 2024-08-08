@@ -1,22 +1,33 @@
 import { azure } from '@ai-sdk/azure';
+import { getHttpStatus } from '@src/constant/http-status';
 import { APICallError, streamText } from 'ai';
+import { RateLimiter } from 'limiter';
 import { NextResponse } from 'next/server';
-
 // Optional, but recommended: run on the edge runtime.
 // See https://vercel.com/docs/concepts/functions/edge-functions
 export const runtime = 'edge';
 
-const openai = azure('your-deployment-name', {
-  logitBias: {
-    // optional likelihood for specific tokens
-    '50256': -100,
-  },
-  user: 'test-user', // optional unique user identifier
+const limiter = new RateLimiter({
+  tokensPerInterval: 3,
+  interval: 'second',
+  fireImmediately: true,
 });
 
 export async function POST(req: Request) {
   const { messages, model } = await req.json();
   try {
+    const remainingRequests = await limiter.removeTokens(1);
+    if (remainingRequests < 0) {
+      return new NextResponse(
+        JSON.stringify({
+          success: false,
+          message: getHttpStatus('TooManyRequests').message,
+        }),
+        {
+          status: getHttpStatus('TooManyRequests').code,
+        },
+      );
+    }
     const response = await streamText({
       model: azure(model ?? 'gpt-3.5-turbo'),
       messages,
