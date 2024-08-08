@@ -17,6 +17,7 @@ export default function RootLayout(props: {
   auth: React.ReactNode;
   modal: React.ReactNode;
 }) {
+  const { children, auth, modal } = props;
   return (
     <html lang="en" suppressHydrationWarning>
       <body>
@@ -33,9 +34,9 @@ export default function RootLayout(props: {
               <Link href="/">Back To Home</Link>
             </div>
             <div className="text-green-600">
-              {props.auth}
-              {props.children}
-              {props.modal}
+              {auth}
+              {children}
+              {modal}
             </div>
             {photos.map(({ id, imageSrc }) => (
               <Link className="block" key={id} href={`/photos/${id}`}>
