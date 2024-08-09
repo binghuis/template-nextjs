@@ -1,5 +1,5 @@
-import { getHttpStatus } from '@src/constant/http-status';
-import { isAuthenticated } from '@src/lib/auth';
+import { getHttpStatus } from '@/constant/http-status';
+import { isAuthenticated } from '@/lib/auth';
 import { NextResponse, type NextRequest } from 'next/server';
 
 export const withAuth = (next: Function) => {

@@ -1,8 +1,8 @@
 'use client';
 
+import { MoonIcon } from '@/icons/moon';
+import { SunIcon } from '@/icons/sun';
 import { Switch } from '@nextui-org/react';
-import { MoonIcon } from '@src/icons/moon';
-import { SunIcon } from '@src/icons/sun';
 import { useTheme } from 'next-themes';
 import { useEffect, useState } from 'react';
 

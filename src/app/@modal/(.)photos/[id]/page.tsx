@@ -1,6 +1,6 @@
 'use client';
+import photos from '@/constant/photos';
 import { Image, Modal, ModalContent } from '@nextui-org/react';
-import photos from '@src/constant/photos';
 import { useRouter } from 'next/navigation';
 interface Props {
   params: {

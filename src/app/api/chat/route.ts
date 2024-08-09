@@ -1,5 +1,5 @@
+import { getHttpStatus } from '@/constant/http-status';
 import { azure } from '@ai-sdk/azure';
-import { getHttpStatus } from '@src/constant/http-status';
 import { APICallError, streamText } from 'ai';
 import { RateLimiter } from 'limiter';
 import { NextResponse } from 'next/server';

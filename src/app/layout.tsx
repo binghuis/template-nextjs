@@ -1,5 +1,5 @@
-import photos from '@src/constant/photos';
-import '@src/styles/globals.css';
+import photos from '@/constant/photos';
+import '@/styles/globals.css';
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { Providers } from './providers';

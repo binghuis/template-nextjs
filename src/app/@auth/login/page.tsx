@@ -1,5 +1,4 @@
 'use client';
-// app/@auth/login/page.js
 import { useRouter } from 'next/navigation';
 
 export default function Page() {

@@ -1,6 +1,6 @@
 'use client';
+import photos from '@/constant/photos';
 import { Image } from '@nextui-org/react';
-import photos from '@src/constant/photos';
 
 interface Props {
   params: {
