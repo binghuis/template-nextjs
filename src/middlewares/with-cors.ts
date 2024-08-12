@@ -31,7 +31,7 @@ export const withCORS = (next: Function) => {
     }
 
     Object.entries(corsOptions).forEach(([key, value]) => {
-      response.headers.set(key, value);
+      response.headers?.set(key, value);
     });
 
     return response;
